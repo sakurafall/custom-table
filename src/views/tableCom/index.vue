@@ -1,6 +1,11 @@
 <template>
   <div class="task">
-    <TableC :tableColumns="tableColumns" :tableDataC="tableDataC" :headerStyle="tableCustomize.headerStyle">  
+    <TableC 
+      :tableColumns="tableColumns" 
+      :tableDataC="tableDataC" 
+      :headerStyle="tableCustomize.headerStyle"
+      @saveTable="saveTable"
+      >  
       <template v-slot:address="{ row }">  
         {{ row.province }} {{ row.city }} {{ row.street }}
       </template> 
@@ -66,6 +71,9 @@
     methods: {
       add() {
         console.log('111');
+      },
+      saveTable(data) {
+        this.tableColumns = data
       }
     }
   }
