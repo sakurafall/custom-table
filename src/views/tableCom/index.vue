@@ -26,10 +26,10 @@
         },
         // 任务表格总数据
         tableColumns:  [  
-          { id: 0, prop: 'date', label: '日期', width: 180, show: true},  
-          { id: 1, prop: 'name', label: '姓名', width: 180, show: true},  
+          { ids: 0, prop: 'date', label: '日期', width: 180, show: true},  
+          { ids: 1, prop: 'name', label: '姓名', width: 180, show: true},  
           {  
-            id: 2,
+            ids: 2,
             prop: 'address',  
             label: '地址',   
             width: 300,
@@ -38,7 +38,7 @@
             renderProps: (row, index) => ({ row, index })
           },
           {  
-            id: 3,
+            ids: 3,
             prop: 'tag',  
             label: '标签',   
             width: 300,
@@ -47,7 +47,7 @@
             renderProps: (row, index) => ({ row, index })
           },
           {
-            id: 4,
+            ids: 4,
             prop: 'operation',
             label: '操作',
             width: 400,
